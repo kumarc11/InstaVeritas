@@ -1,7 +1,5 @@
 Where to store: C:/Users/Your_Name/InstaVeritas
 
-*Don't use " >> " it's for showing single line command!
-
 We will use:
 
 Anaconda Navigator!
