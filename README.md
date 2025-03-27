@@ -5,6 +5,8 @@ We will use:
 Anaconda Navigator!
 Python 3.10 (Ensure you have Python installed: Download)
 
+Now in Jupter Notebook, Click new > new terminal, write these command as follows:
+
 Firstly make an env using,
 
 >> python -m venv venv
@@ -26,3 +28,5 @@ Now how to run it!
 >> venv/scripts/activate
 
 >> python app.py
+
+It will show running on some link, hover over to that link press "ctrl+mouse click"
