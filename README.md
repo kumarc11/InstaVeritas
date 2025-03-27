@@ -6,6 +6,7 @@ Anaconda Navigator!
 Python 3.10 (Ensure you have Python installed: Download)
 
 Now in Jupter Notebook, Click new > new terminal, write these command as follows:
+Path must show: C:/Users/Your_Name/InstaVeritas>>
 
 Firstly make an env using,
 
