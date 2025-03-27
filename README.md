@@ -19,8 +19,7 @@ Necessary Libraries:
 
 >> pip install flask
 
-Make sure requirements.txt is empty. If it is not empty, it and save
-then run,
+Make sure requirements.txt is empty. If it is not empty, clear it and save it and then run,
 
 >> pip freeze > requirements.txt
 
