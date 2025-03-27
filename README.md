@@ -9,6 +9,7 @@ Firstly make an env using,
 python -m venv venv
 
 Necessary Libraries:
+
 pip install pandas numpy scikit-learn flask
 
 pip install flask
@@ -20,6 +21,7 @@ pip freeze > requirements.txt
 
 
 Now how to run it!
+
 venv/scripts/activate
 
 python app.py
