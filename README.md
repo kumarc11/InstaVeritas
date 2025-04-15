@@ -26,7 +26,7 @@ Make sure requirements.txt is empty. If it is not empty, clear it and save it an
 
 Now how to run it!
 
->> venv/scripts/activate
+>> venv/Scripts/activate
 
 >> python app.py
 
