@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const loadingIndicator = document.getElementById("loading");
   const submitButton = accountForm.querySelector("button");
   const footer = document.getElementById("undeletable-footer");
+  const themeToggleButton = document.querySelector(".theme-toggle button");
 
   // Prevent footer removal using MutationObserver
   const observer = new MutationObserver((mutations) => {
@@ -83,4 +84,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     return true;
   }
+
+  // Theme Toggle functionality
+  themeToggleButton.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  });
+
 });
