@@ -1,3 +1,5 @@
+***Note: Carefully check the case-sensitivity!! Otherwise project won't work!***
+
 Where to store: C:/Users/Your_Name/InstaVeritas
 
 We will use:
