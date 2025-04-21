@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fake Account Detector</title>
-  <!-- Link to the CSS file -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -12,53 +12,79 @@
     <div class="logo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" alt="Instagram Logo">
     </div>
-    <h1>Fake Account Detector</h1>
-    <form id="accountForm">
-      <label for="profile_pic">Profile Picture (1 for Yes, 0 for No):</label>
-      <input type="number" id="profile_pic" name="profile_pic" required>
-      
-      <label for="nums_length_username">Nums/Length Username (e.g., 0.1):</label>
-      <input type="number" step="any" id="nums_length_username" name="nums_length_username" required>
-      
-      <label for="fullname_words">Fullname Words (e.g., 2):</label>
-      <input type="number" id="fullname_words" name="fullname_words" required>
-      
-      <label for="nums_length_fullname">Nums/Length Fullname (e.g., 0.0):</label>
-      <input type="number" step="any" id="nums_length_fullname" name="nums_length_fullname" required>
-      
-      <label for="name_equals_username">Name equals Username (1 for Yes, 0 for No):</label>
-      <input type="number" id="name_equals_username" name="name_equals_username" required>
-      
-      <label for="description_length">Description Length (e.g., 50):</label>
-      <input type="number" id="description_length" name="description_length" required>
-      
-      <label for="external_url">External URL (1 for Yes, 0 for No):</label>
-      <input type="number" id="external_url" name="external_url" required>
-      
-      <label for="private">Private Account (1 for Yes, 0 for No):</label>
-      <input type="number" id="private" name="private" required>
-      
-      <label for="posts">Number of Posts:</label>
-      <input type="number" id="posts" name="posts" required>
-      
-      <label for="followers">Number of Followers:</label>
-      <input type="number" id="followers" name="followers" required>
-      
-      <label for="follows">Number of Follows:</label>
-      <input type="number" id="follows" name="follows" required>
-      
+
+    <h1>Insta Veritas: Fake Account Detector</h1>
+
+    <!-- Form Section -->
+    <form id="accountForm" aria-label="Fake Account Detection Form">
+      <div class="form-group">
+        <label for="profile_pic">Profile Picture:</label>
+        <input type="number" id="profile_pic" name="profile_pic" min="0" max="1" placeholder="1 for Yes, 0 for No" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nums_length_username">Nums/Length Username:</label>
+        <input type="number" step="any" id="nums_length_username" placeholder="Calculate by dividing no. of Alphabet to Number in username" name="nums_length_username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fullname_words">Fullname Words:</label>
+        <input type="number" id="fullname_words" name="fullname_words" placeholder="Full name Length" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nums_length_fullname">Nums/Length Fullname:</label>
+        <input type="number" step="any" id="nums_length_fullname" placeholder="Calculate by dividing no. of Alphabet to Number in Name" name="nums_length_fullname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name_equals_username">Name equals Username:</label>
+        <input type="number" id="name_equals_username" name="name_equals_username" placeholder="1 for Yes, 0 for No" min="0" max="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description_length">Description Length:</label>
+        <input type="number" id="description_length" name="description_length" placeholder="Length of Description" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label for="external_url">External URL:</label>
+        <input type="number" id="external_url" name="external_url" placeholder="1 for Yes, 0 for No" min="0" max="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="private">Private Account:</label>
+        <input type="number" id="private" name="private" placeholder="1 for Yes, 0 for No" min="0" max="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="posts">Number of Posts:</label>
+        <input type="number" id="posts" name="posts" placeholder="No. of Posts" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label for="followers">Number of Followers:</label>
+        <input type="number" id="followers" name="followers" placeholder="No. of Followers" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label for="follows">Number of Follows:</label>
+        <input type="number" id="follows" name="follows" placeholder="No. of Follows" min="0" required>
+      </div>
+
       <button type="submit">Check Account</button>
+      <div id="loading" style="display: none;">Loading...</div>
     </form>
-    
+
     <div class="result" id="result"></div>
   </div>
-  
-  <!-- Link to the JavaScript file -->
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <!-- Footer Section -->
   <footer id="undeletable-footer">
-    <p>
-        Made with ❤️ by <strong>Chetan Kumar</strong>
-    </p>
+    <p>Made with ❤️ by <strong>Chetan Kumar</strong></p>
   </footer>
+
+  <!-- JavaScript File -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
